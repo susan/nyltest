@@ -36,40 +36,31 @@ const router1 = express.Router()
   });
 
 
-   // router1.get('/emailInfo/first',function(req, res, next) {
-   //   const nylas = Nylas.with(req.session.token)
-
-   //   let accountInfo = nylas.account.get();
-   //   let threadInfo = nylas.threads.first();
-
-   //   Promise.All([accountInfo, threadInfo])
-   //   .then(function([account, firstThreadInfo])  {
-   //      res.render('emailInfo',
-   //        {
-   //          account: account,
-   //          thread: firstThreadInfo,
-   //        }
-   //      );
-   //    })
-   // });
+  // router1.get('/firstThread', function(req, res, next) {
+  //   const nylas = Nylas.with(req.session.token);
+  //   let accountInfo = nylas.account.get();
+  //   let threadInfo = nylas.threads.first();
+  //   Promise.all([accountInfo, threadInfo])
+  //     .then( ([accountData, threadData]) => {
+  //     res.render('emailInfo',
+  //       {
+  //         account: accountData,
+  //         thread: threadData,
+  //       }
+  //     );
+  //   });
+  // });
 
 
-  router1.get('/firstThread',function(req, res, next) {
-    // request.get("http://swapi.co/api/people/1/", (err, response, body) => {
-    //     if (err) {
-    //         return next(err);
-    //     }
-    //     res.send("hi")
-    //     //res.render("emailInfo", {data: JSON.parse(body)});
-    // });
-     const nylas = Nylas.with(req.session.token);
-     nylas.threads.first()
-     .then (firstThreadInfo => {
-        res.render('emailInfo',
-          { thread: firstThreadInfo }
-        );
-      })
-   });
+  // router1.get('/firstThread',function(req, res, next) {
+  //    const nylas = Nylas.with(req.session.token);
+  //    nylas.threads.first()
+  //    .then (firstThreadInfo => {
+  //       res.render('emailInfo',
+  //         { thread: firstThreadInfo }
+  //       );
+  //     })
+  //  });
 
 
 

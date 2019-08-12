@@ -7,7 +7,7 @@ const path = require('path')
 const session = require('express-session');
 
 const routes = require('./router/main');
-const firstThread = require('./router/main');
+const emailInfo = require('./router/emailInfo');
 const about = require('./router/main');
 
 if (process.env.NODE_ENV !== 'production') {
@@ -53,7 +53,7 @@ function checkAuth(req, res, next) {
 }
 
 app.use('/', routes);
-app.use('/firstThread', checkAuth, routes);
+app.use('/emailInfo', checkAuth, emailInfo);
 app.use('/about', checkAuth, routes);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
