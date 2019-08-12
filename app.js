@@ -7,8 +7,8 @@ const path = require('path')
 const session = require('express-session');
 
 const routes = require('./router/main');
-const emailInfo = require('./router/emailInfo');
-const about = require('./router/about');
+const emailInfo = require('./router/main');
+const about = require('./router/main');
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config({path: __dirname + '/.env'})

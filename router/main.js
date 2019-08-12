@@ -56,6 +56,8 @@ const router1 = express.Router()
 
   router1.get('/first',function(req, res, next) {
      nylas.threads.first()
+     // .then(r=> console.log(r))
+     // res.render('emailInfo')
      .then (firstThreadInfo => {
         res.render('emailInfo',
           { thread: firstThreadInfo }
