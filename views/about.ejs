@@ -6,10 +6,46 @@
 
   <body class="container">
     <h3> Success! Your email has been linked <h3>
-    <p><a href='/emailInfo/firstThread'>  First thread </a></p>
+    <p><a href='/emailInfo/firstMessage'>  First Message </a></p>
+    </br>
+    <p><a='/emailInfo/firstThread'>  First thread </a></p>
     </br>
     <p><a href='/emailInfo/listThreads'>  List of threads </a></p>
     </br>
+
+    <h2><a href= '/calendarInfo'> Check your Calendar </a> </h2>
+
    <p><a href= '/' > Link up another email account </a></p>
+
+
+   <h2> Write an Email </h2>
+   <div>
+     <form action='/emailInfo/draft' method='post'>
+
+        <div class="form-field">
+        <label for="receiver's name">Receiver's Name</label>
+          <input class='input' name="name" value="" placeholder="name" />
+       </div>
+
+       <div class="form-field">
+        <label for="email">Receiver's Email</label>
+         <input class='input' name="email" value="" />
+        </div>
+
+         <div class="form-field">
+        <label for="subject">Subject</label>
+         <textarea class='input' name="subject" value="" rows="2"></textarea>
+       </div>
+
+        <div class="form-field">
+          <label for="message">Message</label>
+           <textarea class='input' name="message" value="" rows="4"> </textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="submit" type="submit">Send</button>
+       </div>
+     </form>
+    </div>
   </body>
 </html>

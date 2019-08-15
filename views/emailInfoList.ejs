@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<% include ./partial/head %>
+  </head>
+
+  <body class="container">
+      <ul>
+        <% threads.forEach(function(thread, index) { %>
+     	    <li>
+     	       Thread Number: <%= index+1 %>
+     	       </br>
+     	       Subject: <%=  thread.subject %>
+     	       </br>
+     	       Snippet: <%=  thread.snippet %>
+     	    </l1>
+       <% }) %>
+      </ul>
+  </body>
+</html>
