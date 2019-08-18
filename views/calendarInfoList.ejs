@@ -16,11 +16,13 @@
            moment.unix(event.when.end_time)
            .format("YYYY-MM-DD HH:mm") %>
           </br>
-     	       Location: <%= event.location %>
-     	       </br>
-     	       Title: <%=  event.title %>
-     	       </br>
-     	       Description: <%=  event.description %>
+     	     Location: <%= event.location %>
+     	     </br>
+     	     Title: <%=  event.title %>
+     	     </br>
+     	     Description: <%=  event.description %>
+           </br>
+          Calendar ID: <%=  event.calendarId %>
      	    </l1>
        <% }) %>
       </ul>
