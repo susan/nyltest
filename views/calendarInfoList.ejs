@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<% include ./partial/head %>
+  </head>
+
+  <body class="container">
+      <ul>
+        <% events.forEach(function(event) { %>
+     	    <li>
+           Start Time: <%=
+           moment.unix(event.when.start_time)
+           .format("YYYY-MM-DD HH:mm") %>
+           </br>
+           End Time: <%=
+           moment.unix(event.when.end_time)
+           .format("YYYY-MM-DD HH:mm") %>
+          </br>
+     	       Location: <%= event.location %>
+     	       </br>
+     	       Title: <%=  event.title %>
+     	       </br>
+     	       Description: <%=  event.description %>
+     	    </l1>
+       <% }) %>
+      </ul>
+  </body>
+</html>
+
+
+
